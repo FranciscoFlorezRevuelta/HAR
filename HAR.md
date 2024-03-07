@@ -2,6 +2,12 @@
 
 ## Objectives
 
+* Provide a comprehensive overview of the field of Human Action and Activity Recognition
+* Differentiate key terms, like "action", "activity", and "behaviour".
+* Examine the various video modalities (RGB, depth, thermal, omnidirectional, egocentric, and neuromorphic) used in HAR, discussing their unique characteristics, challenges, and applications.
+* Delve into the historical approaches to HAR, focusing on the methods and techniques employed before the advent of deep learning.
+* Explore the transformative effect of deep learning on HAR, including the introduction and development of key models such as CNNs, RNNs, LSTMs, 3D CNNs, GNNs, and Transformers.
+
 ## Introduction
 
 Human Action and Activity Recognition (HAR) stands as a vibrant and swiftly advancing field within computer vision, centred on the automatic detection and categorisation of human actions and behaviours from visual data. At its heart, HAR endeavours to interpret and comprehend the subtleties of human movements by analysing data captured through various means such as cameras, depth sensors, and increasingly, sophisticated AI-driven techniques. This domain blends elements from image processing, pattern recognition, machine learning, and artificial intelligence to forge systems capable of identifying specific activities—from straightforward gestures to complex interactions—within a given environment. The applications of HAR are extensive and diverse, spanning sectors such as surveillance, healthcare, sports analysis, human-computer interaction, and entertainment, making it a field of significant interest and continual innovation in both research and practical applications. As technology progresses, HAR continues to push the frontiers of how machines perceive and interact with human dynamics, offering profound implications for the future of automated systems and AI.
@@ -16,21 +22,22 @@ Human behaviour encompasses a more comprehensive scope than individual actions o
 
 ![Pyramid with motion in the base, and action, activity and behaviour towards the top. Arrows pointing up express that going up in the pyramid means more time frame and degree of semantics](actions-activities.jpg)
 
-```
+
 Mandatory readings: 
-* [A review on vision techniques applied to Human Behaviour Analysis for Ambient-Assisted Living](https://doi.org/10.1016/j.eswa.2012.03.005) - Section 2. HBA taxonomies
-* [Going Deeper into Action Recognition: A Survey ](https://doi.org/10.1016/j.imavis.2017.01.010) - Subsection But first, what is an action?
-```
+> * [A review on vision techniques applied to Human Behaviour Analysis for Ambient-Assisted Living](https://doi.org/10.1016/j.eswa.2012.03.005) - Section 2. HBA taxonomies
+> * [Going Deeper into Action Recognition: A Survey ](https://doi.org/10.1016/j.imavis.2017.01.010) - Subsection But first, what is an action?
+ 
+
 HAR is a subset in the field of Human Action Understanding. Related problems are action prediction, temporal action proposal/detection, spatiotemporal action proposal/detection, action instance segmentation, dense captioning...
 
-Mandatory reading: 
-* [Video Action Understanding: A Tutorial](https://apps.dtic.mil/sti/trecms/pdf/AD1143531.pdf) - Section 2. Problems
+> Mandatory reading: 
+> * [Video Action Understanding: A Tutorial](https://apps.dtic.mil/sti/trecms/pdf/AD1143531.pdf) - Section 2. Problems
 
 HAR is extensively applied across various domains, significantly influencing areas such as human-computer interaction, intelligent video surveillance, ambient assisted living, human-robot interaction, entertainment, and intelligent driving. Each application leverages the unique capabilities of HAR to interpret human movements and activities, thereby enhancing interaction and efficiency. For example, in human-computer interaction, HAR systems observe and respond to user actions, while in surveillance, they detect and report suspicious activities. In entertainment, particularly in interactive gaming, HAR enriches user experiences by recognising player movements. Similarly, in ambient assisted living, it aids in monitoring and ensuring the safety of individuals, especially older people or those with disabilities.
 
-Optional readings:
-* Chaaraoui, A. A., Climent-Pérez, P., & Flórez-Revuelta, F. (2012). A review on vision techniques applied to human behaviour analysis for ambient-assisted living. Expert Systems with Applications, 39(12), 10873-10888. (https://doi.org/10.1016/j.eswa.2012.03.005) 
-* Climent-Pérez, P., Spinsante, S., Mihailidis, A., & Florez-Revuelta, F. (2020). A review on video-based active and assisted living technologies for automated lifelogging. Expert Systems with Applications, 139, 112847. (https://doi.org/10.1016/j.eswa.2019.112847)
+> Optional readings:
+> * Chaaraoui, A. A., Climent-Pérez, P., & Flórez-Revuelta, F. (2012). A review on vision techniques applied to human behaviour analysis for ambient-assisted living. Expert Systems with Applications, 39(12), 10873-10888. (https://doi.org/10.1016/j.eswa.2012.03.005) 
+> * Climent-Pérez, P., Spinsante, S., Mihailidis, A., & Florez-Revuelta, F. (2020). A review on video-based active and assisted living technologies for automated lifelogging. Expert Systems with Applications, 139, 112847. (https://doi.org/10.1016/j.eswa.2019.112847)
 
 ## Video modalities
 
@@ -50,16 +57,16 @@ This section delves into the various video modalities—such as RGB, depth, ther
 
 * **Neuromorphic/event cameras**: Neuromorphic cameras are designed to mimic the human visual system. Unlike conventional cameras that capture frames at a fixed rate, neuromorphic cameras operate asynchronously, capturing changes in the scene as they occur. These cameras are event-driven, meaning they only capture and process parts of the scene where there is motion or change. This approach results in lower data rates and faster processing times, making them highly efficient. Neuromorphic cameras are particularly suited for high-speed action recognition tasks where traditional cameras may struggle, such as sports analytics or monitoring fast-moving machinery. Their ability to detect changes in challenging lighting conditions makes them valuable for applications in low-light environments and adverse weather conditions.
 
-Mandatory readings: 
-* [State of the Art of Audio- and Video-Based Solutions for AAL](https://doi.org/10.5281/zenodo.6390709) -  Section 1. Video-based sensing technologies
-* [An Outlook into the Future of Egocentric Vision](https://doi.org/10.48550/arXiv.2308.07123)
+> Mandatory readings: 
+> * [State of the Art of Audio- and Video-Based Solutions for AAL](https://doi.org/10.5281/zenodo.6390709) -  Section 1. Video-based sensing technologies
+> * [An Outlook into the Future of Egocentric Vision](https://doi.org/10.48550/arXiv.2308.07123)
 
-Optional readings:
-* Yu, J., Grassi, A. C. P., & Hirtz, G. (2023). Applications of Deep Learning for Top-View Omnidirectional Imaging: A Survey. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 6420-6432). (https://openaccess.thecvf.com/content/CVPR2023W/OmniCV/papers/Yu_Applications_of_Deep_Learning_for_Top-View_Omnidirectional_Imaging_A_Survey_CVPRW_2023_paper.pdf)
-* Gallego, G., Delbrück, T., Orchard, G., Bartolozzi, C., Taba, B., Censi, A., ... & Scaramuzza, D. (2020). Event-based vision: A survey. IEEE transactions on pattern analysis and machine intelligence, 44(1), 154-180. (https://doi.org/10.1109/TPAMI.2020.3008413)
+> Optional readings:
+> * Yu, J., Grassi, A. C. P., & Hirtz, G. (2023). Applications of Deep Learning for Top-View Omnidirectional Imaging: A Survey. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 6420-6432). (https://openaccess.thecvf.com/content/CVPR2023W/OmniCV/papers/Yu_Applications_of_Deep_Learning_for_Top-View_Omnidirectional_Imaging_A_Survey_CVPRW_2023_paper.pdf)
+> * Gallego, G., Delbrück, T., Orchard, G., Bartolozzi, C., Taba, B., Censi, A., ... & Scaramuzza, D. (2020). Event-based vision: A survey. IEEE transactions on pattern analysis and machine intelligence, 44(1), 154-180. (https://doi.org/10.1109/TPAMI.2020.3008413)
 
-Optional viewings:
-* Computer vision pills (1. Introduction, 2. Sensors and image modalities, 3. Camera setups), by Pau Climent-Pérez, at https://goodbrother.eu/onlinespeak
+> Optional viewings:
+> * Computer vision pills (1. Introduction, 2. Sensors and image modalities, 3. Camera setups), by Pau Climent-Pérez, at https://goodbrother.eu/onlinespeak
 
 
 ## Datasets
@@ -96,8 +103,8 @@ Before deep learning, classical machine learning algorithms like Support Vector 
 
 One of the most significant limitations of traditional methods was their reliance on handcrafted features. While effective in certain scenarios, these features often failed to capture the complexity and variability of human actions across different contexts and environments. As video resolutions and dataset sizes increased, the computational load of processing and analysing data using traditional methods became a significant challenge. The ability to process video data in real-time was often hindered by the computational intensity of traditional feature extraction and classification techniques. Moreover, accurately segmenting and recognizing actions within continuous video streams posed significant challenges, often leading to lower accuracy in complex real-world scenarios.
 
-Mandatory reading: 
-* [Going Deeper into Action Recognition: A Survey](https://doi.org/10.1016/j.imavis.2017.01.010) - Section 1. Where to start from? and Section 2. Local Representation based Approaches
+> Mandatory reading: 
+> * [Going Deeper into Action Recognition: A Survey](https://doi.org/10.1016/j.imavis.2017.01.010) - Section 1. Where to start from? and Section 2. Local Representation based Approaches
 
 ## HAR post-deep learning
 Deep learning has introduced a paradigm shift in how we approach the problem of action and activity recognition. With its ability to learn feature representations directly from data, deep learning models have overcome many of the limitations of traditional methods, offering enhanced accuracy, robustness, and adaptability.
@@ -108,46 +115,40 @@ CNNs are characterized by their deep, layered structure, typically comprising co
 
 Two-stream networks represent a pivotal innovation in using CNNs for HAR. These models consist of two separate CNNs: one stream processes individual frames for spatial information, and the other stream processes motion information (often using optical flow images). By combining these streams, two-stream networks effectively capture both the appearance and movement aspects of actions, leading to significantly improved recognition performance.
 
-Mandatory reading: 
-* [Two-Stream Convolutional Networks
+> Mandatory reading: 
+> * [Two-Stream Convolutional Networks
 for Action Recognition in Videos](http://papers.neurips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf) - Section 2. Two-stream architecture for video recognition and Section 3. Optical flow ConvNets
 
 While CNNs excel in spatial analysis, integrating temporal information remains a challenge. This limitation has led to the exploration of combining CNNs with models like RNNs and LSTMs for comprehensive spatio-temporal analysis. RNNs are designed to process sequential data, making them inherently suitable for video-based HAR, where actions unfold over time. They work by maintaining a 'memory' of previous inputs through internal states, allowing them to capture temporal dependencies. In HAR, RNNs analyse sequences of frames or features extracted from frames (using CNNs), providing a mechanism to understand actions as a progression of movements rather than isolated events. Standard RNNs are prone to the vanishing gradient problem, which hinders learning long-term dependencies. LSTMs address this by incorporating a gated mechanism, enabling them to retain information over longer sequences without degradation. This combination allows for a more holistic understanding of actions, capturing both the 'what' (spatial features) and the 'how' (temporal patterns) of human movements. For applications requiring real-time action recognition, the latency involved in processing sequences through RNNs and LSTMs can be a limiting factor. Research efforts are directed towards reducing this latency and improving the models' suitability for real-time applications.
 
-Mandatory reading: 
-* [Long-term recurrent convolutional networks for visual recognition and description](http://openaccess.thecvf.com/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf)
+> Mandatory reading: 
+> * [Long-term recurrent convolutional networks for visual recognition and description](http://openaccess.thecvf.com/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf)
 
 While traditional 2D CNNs excel in extracting spatial features from individual frames, 3D CNNs extend this capability to the temporal domain. They apply convolutions across both spatial dimensions (height and width of frames) and the temporal dimension (sequence of frames). This integrated approach allows 3D CNNs to learn spatio-temporal features directly from sequences of video frames, capturing both the appearance and motion information inherent in human actions. 3D CNNs enable end-to-end learning from raw video data, simplifying the action recognition pipeline by eliminating the need for separate feature extraction and temporal modelling steps. Due to their ability to process sequences of frames, 3D CNNs are particularly effective in recognising complex actions where the movement and appearance are closely intertwined. Various architectures of 3D CNNs have been proposed, each with different configurations and optimizations. Notable examples include C3D (3D ConvNet) and I3D (Inflated 3D ConvNet), which have demonstrated significant success in HAR tasks. One of the primary challenges with 3D CNNs is their high computational demand, as they process a larger volume of data compared to 2D CNNs. Optimising these models for efficiency without sacrificing performance is an active area of research.
 
-Mandatory readings: 
-* [Learning Spatiotemporal Features with 3D Convolutional Networks](https://openaccess.thecvf.com/content_iccv_2015/papers/Tran_Learning_Spatiotemporal_Features_ICCV_2015_paper.pdf)
-* [Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset](https://openaccess.thecvf.com/content_cvpr_2017/papers/Carreira_Quo_Vadis_Action_CVPR_2017_paper.pdf) - Section 2. Action Classification Architectures
+> Mandatory readings: 
+> * [Learning Spatiotemporal Features with 3D Convolutional Networks](https://openaccess.thecvf.com/content_iccv_2015/papers/Tran_Learning_Spatiotemporal_Features_ICCV_2015_paper.pdf)
+> * [Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset](https://openaccess.thecvf.com/content_cvpr_2017/papers/Carreira_Quo_Vadis_Action_CVPR_2017_paper.pdf) - Section 2. Action Classification Architectures
 
 Originally developed for natural language processing tasks, Transformers have been adapted to the field of HAR, bringing in their unique strengths and novel approaches. In HAR, Transformers are adapted to handle video data, where the attention mechanism can be applied to both spatial features within frames and temporal relations across frames. One of the key advantages of Transformers in HAR is their ability to capture long-range dependencies across video sequences. Unlike traditional models that may struggle with long temporal sequences, Transformers can effectively process and relate information from different parts of a video. This capability is particularly useful in understanding complex actions where context and the sequence of movements are crucial. Transformers do not require a fixed-size input, making them adaptable to various lengths of video sequences. This flexibility is beneficial in HAR where actions can vary significantly in duration. Transformers can be combined with other deep learning models, such as CNNs for spatial feature extraction, creating powerful hybrid architectures for action recognition. With ongoing optimizations, Transformers have the potential to be employed in real-time HAR systems, enhancing interactive applications like augmented reality and human-robot interaction.
 
-Mandatory reading: 
-* [Vivit: A video vision transformer](https://openaccess.thecvf.com/content/ICCV2021/html/Arnab_ViViT_A_Video_Vision_Transformer_ICCV_2021_paper.html)
+> Mandatory reading: 
+> * [Vivit: A video vision transformer](https://openaccess.thecvf.com/content/ICCV2021/html/Arnab_ViViT_A_Video_Vision_Transformer_ICCV_2021_paper.html)
 
 Unlike traditional neural networks, Graph Neural Networks (GNNs) operate on graph structures, making them adept at handling data represented in nodes (vertices) and edges. In the context of HAR, this allows for the modelling of complex relationships and interactions within human actions. GNNs are particularly effective in scenarios where the spatial and temporal interactions between different body parts or objects are crucial for recognising an action. One of the common applications of GNNs in HAR is in analysing human poses represented as skeleton graphs. Each joint or key point on the human body is treated as a graph node, and the connections between them as edges. GNNs process these skeleton graphs to capture the dynamic relationships and dependencies between body parts, facilitating accurate recognition of actions based on pose and movement patterns. Some GNN-based HAR systems extend beyond spatial analysis by incorporating temporal information. This is achieved by constructing spatio-temporal graphs, where temporal connections are added between nodes across frames, enabling the network to understand actions as they evolve over time. Processing graph data can be computationally intensive, especially for large and complex graphs. Optimising GNN architectures for efficiency while maintaining their relational learning capabilities is a key challenge. The design of the graph structure, including how nodes and edges are defined and connected, significantly impacts the performance of GNNs. Research is ongoing to develop methods for optimal graph construction and learning in the context of HAR.
 
-Mandatory readings: 
-* [Spatial temporal graph convolutional networks for skeleton-based action recognition](https://ojs.aaai.org/index.php/AAAI/article/download/12328/12187)
-* [Skeleton-Based Action Recognition with Shift Graph Convolutional Network](http://openaccess.thecvf.com/content_CVPR_2020/papers/Cheng_Skeleton-Based_Action_Recognition_With_Shift_Graph_Convolutional_Network_CVPR_2020_paper.pdf) - Section 2.1. GCN-based skeleton action recognition
+> Mandatory readings: 
+> * [Spatial temporal graph convolutional networks for skeleton-based action recognition](https://ojs.aaai.org/index.php/AAAI/article/download/12328/12187)
+> * [Skeleton-Based Action Recognition with Shift Graph Convolutional Network](http://openaccess.thecvf.com/content_CVPR_2020/papers/Cheng_Skeleton-Based_Action_Recognition_With_Shift_Graph_Convolutional_Network_CVPR_2020_paper.pdf) - Section 2.1. GCN-based skeleton action recognition
 
 Networks that combine one stream with RGB images and another with skeletons for action or activity recognition represent a significant advancement in the field. These dual-stream networks harness the strengths of both RGB data and skeletal information to provide a comprehensive analysis of human actions. The RGB stream effectively captures detailed visual information such as texture and colour, crucial for understanding the context and environment of the action. Simultaneously, the skeleton stream focuses on the movement and posture of the human body, offering robustness against background noise and variations in lighting or appearance. By integrating these two streams, such networks achieve a more nuanced and accurate understanding of actions, effectively interpreting both the physical movements and their surrounding contexts. This approach is particularly beneficial in complex scenarios where the background information is as crucial as the action itself, such as in interactive gaming, sports analysis, and advanced surveillance systems.
 
-Optional readings:
-* Wang, S., Zhou, L., Chen, Y., Huo, J., & Wang, J. (2022, July). When Skeleton Meets Appearance: Adaptive Appearance Information Enhancement for Skeleton Based Action Recognition. In 2022 IEEE International Conference on Multimedia and Expo (ICME) (pp. 1-6). IEEE. (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9859589)
-* Das, S., Dai, R., Yang, D., & Bremond, F. (2021). Vpn++: Rethinking video-pose embeddings for understanding activities of daily living. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(12), 9703-9717. (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9613748) 
+> Optional readings:
+> * Wang, S., Zhou, L., Chen, Y., Huo, J., & Wang, J. (2022, July). When Skeleton Meets Appearance: Adaptive Appearance Information Enhancement for Skeleton Based Action Recognition. In 2022 IEEE International Conference on Multimedia and Expo (ICME) (pp. 1-6). IEEE. (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9859589)
+> * Das, S., Dai, R., Yang, D., & Bremond, F. (2021). Vpn++: Rethinking video-pose embeddings for understanding activities of daily living. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(12), 9703-9717. (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9613748) 
 
 ## Notebooks
 
-* MHI
-* optical flow
-* MediaPipe pose estimation
-* Step-by-step pose estimation model
-* Example of I3D
-* Example of transformer
-* Example of GCN
+These will be provided before the lab session.
 
 
